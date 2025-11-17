@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda Virtual</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛍️ Tienda Virtual</h1>
+    <div id="iconoCarrito">
+      🛒 <span id="contadorCarrito">0</span>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Productos disponibles</h2>
+      <div class="productos" id="listaProductos"></div>
+    </section>
+
+    <section>
+      <h2>Carrito de compras</h2>
+      <div class="carrito" id="carrito"></div>
+      <p id="total">Total: $0</p>
+      <div class="carrito-acciones">
+        <button id="vaciarCarrito">Vaciar carrito</button>
+        <button id="finalizarCompra">Finalizar compra</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gracias por visitar nuestra tienda 🛒</p>
+  </footer>
+
+  <!-- Modal checkout -->
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal">
+      <h3>Finalizar compra</h3>
+      <form id="checkoutForm">
+        <label>
+          Nombre completo
+          <input type="text" id="clienteNombre" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="clienteEmail" required />
+        </label>
+        <label>
+          Dirección
+          <input type="text" id="clienteDireccion" required />
+        </label>
+        <div class="modal-buttons">
+          <button type="submit">Pagar (simulado)</button>
+          <button type="button" id="cancelarCheckout">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

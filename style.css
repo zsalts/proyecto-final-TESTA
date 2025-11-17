@@ -1,0 +1,201 @@
+/* ======== Estilos generales ======== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f4ff, #d9e8ff);
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ======== Encabezado ======== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #1e3a8a;
+  letter-spacing: 1px;
+}
+
+#iconoCarrito {
+  background: #1e3a8a;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#contadorCarrito {
+  background: white;
+  color: #1e3a8a;
+  border-radius: 50%;
+  padding: 3px 8px;
+  margin-left: 5px;
+}
+
+/* ======== Secciones ======== */
+h2 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* ======== Contenedores ======== */
+.productos, .carrito {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ======== Tarjetas ======== */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h3, .card h4 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.card p {
+  color: #374151;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* ======== Botones ======== */
+button {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  transform: scale(1.05);
+}
+
+/* small inline control buttons in cart */
+.cart-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.small-btn {
+  padding: 6px 10px;
+  font-size: 0.85em;
+  border-radius: 6px;
+}
+
+/* ======== Total y acciones ======== */
+#total {
+  font-size: 1.4em;
+  text-align: center;
+  color: #111827;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.carrito-acciones {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#vaciarCarrito {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+#vaciarCarrito:hover {
+  background: linear-gradient(135deg, #b91c1c, #dc2626);
+}
+
+/* ======== Modal checkout ======== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.45);
+  z-index: 50;
+}
+
+.hidden { display: none; }
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+/* ======== Footer ======== */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #1e3a8a;
+}
+
+/* ======== Responsivo ======== */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+}
